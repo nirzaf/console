@@ -14,10 +14,10 @@ namespace source
             double subtractedValue = calc.SubstractFunction(num1, num2);
             double multipliedValue = calc.MultiplyFunction(num1, num2);
             double dividedValue = calc.DivideFunction(num1, num2);
-            Console.WriteLine(" Added Value : " +addedValue.ToString());
-            Console.WriteLine(" Substracted Value : " +subtractedValue.ToString());
-            Console.WriteLine(" Multiplied Value : " +multipliedValue.ToString());
-            Console.WriteLine(" Divided Value : " +dividedValue.ToString());
+            Console.WriteLine(" Added Value : " + addedValue.ToString());
+            Console.WriteLine(" Substracted Value : " + subtractedValue.ToString());
+            Console.WriteLine(" Multiplied Value : " + multipliedValue.ToString());
+            Console.WriteLine(" Divided Value : " + dividedValue.ToString());
         }
     }
 
