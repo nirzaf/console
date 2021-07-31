@@ -6,16 +6,16 @@ namespace source
     {
         static void Main(string[] args)
         {
-            // Car car = new Car();
-            // Console.WriteLine("Enter the color of the car : ");
-            // string color = Console.ReadLine();
-            // car.setColor(color);
-            // Console.WriteLine("Enter the Model of the car : ");
-            // string model = Console.ReadLine();
-            // car.setModel(model);
-            // Console.WriteLine("Enter the Year of the car : ");
-            // int year = int.Parse(Console.ReadLine());
-            // car.setYear(year);
+            Car car = new Car();
+            Console.WriteLine("Enter the color of the car : ");
+            string color = Console.ReadLine();
+            car.setColor(color);
+            Console.WriteLine("Enter the Model of the car : ");
+            string model = Console.ReadLine();
+            car.setModel(model);
+            Console.WriteLine("Enter the Year of the car : ");
+            int year = int.Parse(Console.ReadLine());
+            car.setYear(year);
         }
     }
 
