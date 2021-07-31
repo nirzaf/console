@@ -12,8 +12,8 @@ namespace source
             double num2 = double.Parse(Console.ReadLine());
             double addedValue = calc.AddFunction(num1, num2);
             double subtractedValue = calc.SubstractFunction(num1, num2);
-            double multipliedValue = calc.MultiplyFunction(num1, num2);
-            double dividedValue = calc.DivideFunction(num1, num2);
+            var multipliedValue = calc.MultiplyFunction(num1, num2);
+            var dividedValue = calc.DivideFunction(num1, num2);
             Console.WriteLine(" Added Value : " + addedValue.ToString());
             Console.WriteLine(" Substracted Value : " + subtractedValue.ToString());
             Console.WriteLine(" Multiplied Value : " + multipliedValue.ToString());
