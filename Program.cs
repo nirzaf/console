@@ -6,16 +6,18 @@ namespace source
     {
         static void Main(string[] args)
         {
-            Car car = new Car();
-            Console.WriteLine("Enter the color of the car : ");
-            string color = Console.ReadLine();
-            car.setColor(color);
-            Console.WriteLine("Enter the Model of the car : ");
-            string model = Console.ReadLine();
-            car.setModel(model);
-            Console.WriteLine("Enter the Year of the car : ");
-            int year = int.Parse(Console.ReadLine());
-            car.setYear(year);
+            Console.WriteLine("Welcome to Calculator");
+            Calculator calc = new Calculator();
+            double num1 = double.Parse(Console.ReadLine());
+            double num2 = double.Parse(Console.ReadLine());
+            double addedValue = calc.AddFunction(num1, num2);
+            double subtractedValue = calc.SubstractFunction(num1, num2);
+            double multipliedValue = calc.MultiplyFunction(num1, num2);
+            double dividedValue = calc.DivideFunction(num1, num2);
+            Console.WriteLine(" Added Value : " +addedValue.ToString());
+            Console.WriteLine(" Substracted Value : " +subtractedValue.ToString());
+            Console.WriteLine(" Multiplied Value : " +multipliedValue.ToString());
+            Console.WriteLine(" Divided Value : " +dividedValue.ToString());
         }
     }
 
@@ -46,7 +48,7 @@ namespace source
 
     public class DevideNumbers : SubstractNumbers
     {
-        public double DevideFunction(double number1, double number2)
+        public double DivideFunction(double number1, double number2)
         {
             this.number1 = number1;
             this.number2 = number2;
@@ -65,31 +67,5 @@ namespace source
     }
     public class Calculator : MultiplyNumbers
     {
-    }
-
-    public class Car
-    {
-        public string Model { get; set; }
-        public string Color { get; set; }
-        public int Year { get; set; }
-
-        public Car() { }
-        internal void setModel(string model)
-        {
-            this.Model = model;
-            Console.WriteLine("Model of this car is : " + this.Model);
-        }
-
-        internal void setColor(string color)
-        {
-            this.Color = color;
-            Console.WriteLine("Color of this car is : " + this.Color);
-        }
-
-        internal void setYear(int year)
-        {
-            this.Year = year;
-            Console.WriteLine("Year of this car is : " + this.Year);
-        }
     }
 }
