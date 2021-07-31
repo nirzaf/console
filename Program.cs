@@ -6,17 +6,65 @@ namespace source
     {
         static void Main(string[] args)
         {
-            Car car = new Car();
-            Console.WriteLine("Enter the color of the car : ");
-            string color = Console.ReadLine();
-            car.setColor(color);
-            Console.WriteLine("Enter the Model of the car : ");
-            string model = Console.ReadLine();
-            car.setModel(model);
-            Console.WriteLine("Enter the Year of the car : ");
-            int year = int.Parse(Console.ReadLine());
-            car.setYear(year);
+            // Car car = new Car();
+            // Console.WriteLine("Enter the color of the car : ");
+            // string color = Console.ReadLine();
+            // car.setColor(color);
+            // Console.WriteLine("Enter the Model of the car : ");
+            // string model = Console.ReadLine();
+            // car.setModel(model);
+            // Console.WriteLine("Enter the Year of the car : ");
+            // int year = int.Parse(Console.ReadLine());
+            // car.setYear(year);
         }
+    }
+
+    public class AddNumbers
+    {
+         public double number1 { get; set; }
+         public double number2 { get; set; }
+
+         public double AddFunction(double number1, double number2)
+         {
+             this.number1 = number1;
+             this.number2 = number2;
+             return this.number1 + this.number2;
+         }
+
+    }
+
+    
+    public class SubstractNumbers : AddNumbers
+    {
+         public double SubstractFunction(double number1, double number2)
+         {
+             this.number1 = number1;
+             this.number2 = number2;
+             return this.number1 - this.number2;
+         }
+    }
+
+    public class DevideNumbers : SubstractNumbers
+    {
+        public double DevideFunction(double number1, double number2)
+        {
+            this.number1 = number1;
+            this.number2 = number2;
+            return this.number1 / this.number2;
+        }
+    }
+
+     public class MultiplyNumbers : DevideNumbers
+    {
+        public double MultiplyFunction(double number1, double number2)
+        {
+            this.number1 = number1;
+            this.number2 = number2;
+            return this.number1 * this.number2;
+        }
+    }
+    public class Calculator : MultiplyNumbers
+    {
     }
 
     public class Car
